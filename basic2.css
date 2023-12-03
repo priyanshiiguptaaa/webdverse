@@ -1,0 +1,133 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  max-width: 100%; /* Ensures the image doesn't exceed its container width */
+  height: 0.0000000000002%; /* Allows the image to maintain its aspect ratio */
+  display: block; /* Ensures it behaves as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero section styles */
+.hero {
+  text-align: center;
+  padding: 50px 0;
+  background-image: url('path_to_your_hero_image.jpg');
+  background-size: cover;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Styling for the blockquote */
+blockquote {
+  font-style: italic;
+  font-size: 20px;
+  color:#2AAA8A;
+  margin: 0;
+  padding: 10px;
+  border-left: 3px solid #007bff; /* Adding a left border for emphasis */
+}
+
+/* Styling for the blockquote citation */
+blockquote::after {
+  content: '\2014'; /* Unicode for an em dash */
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #2AAA8A;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Other sections styling... */
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styles for contact info, social media, policies... */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seed link- Online Plant Store</title>
+    <style>
+        /* Styles as before */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Green Haven</h1>
+        <p>Your Online Plant Store</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
+        <a href="#">Cart</a>
+    </nav>
+
+    <div class="hero-image">
+        <h2>Bring Nature Home</h2>
+        <p>Discover a variety of plants to enhance your living space.</p>
+    </div>
+
+    <div class="search-container">
+        <label for="plant-search">Search Plants:</label>
+        <input type="text" id="plant-search" oninput="searchPlants()" placeholder="Enter plant name...">
+    </div>
+
+    <div class="featured-products">
+        <!-- Plant 1 -->
+        <div class="product-card" data-plant-name="Succulent Delight">
+            <img src="plant1.jpg" alt="Succulent Delight">
+            <h2>Succulent Delight</h2>
+            <p>Perfect for indoor spaces. Requires minimal care.</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Plant 2 -->
+        <div class="product-card" data-plant-name="Tropical Paradise">
+            <img src="plant2.jpg" alt="Tropical Paradise">
+            <h2>Tropical Paradise</h2>
+            <p>Bring the tropics to your home with this vibrant plant.</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Add more product cards as needed -->
+
+        <!-- Display nurseries -->
+        <div class="nurseries">
+            <!-- Nursery 1 -->
+            <div class="nursery">
+                <h2>Green Oasis Nursery</h2>
+                <p>Located at [Address]. Specializing in a wide variety of succulents and indoor plants.</p>
+            </div>
+
+            <!-- Nursery 2 -->
+            <div class="nursery">
+                <h2>Tropical Gardens Nursery</h2>
+                <p>Visit us at [Address]. Explore our collection of tropical plants and exotic flowers.</p>
+            </div>
+
+            <!-- Add more nurseries as needed -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Green Haven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchPlants() {
+            const searchInput = document.getElementById('plant-search').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                const plantName = card.dataset.plantName.toLowerCase();
+                const isVisible = plantName.includes(searchInput);
+                card.style.display = isVisible ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
