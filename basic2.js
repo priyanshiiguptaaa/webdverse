@@ -32,3 +32,20 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+function displaySearchResults(results) {
+  const searchResultsContainer = document.getElementById('searchResults');
+  searchResultsContainer.innerHTML = '';
+
+  if (results.length === 0) {
+    searchResultsContainer.innerHTML = 'No results found.';
+    return;
+  }
+
+  results.forEach(result => {
+    const resultDiv = document.createElement('div');
+    resultDiv.innerHTML = `<h3>${result.name}</h3><p>${result.description}</p>`;
+    searchResultsContainer.appendChild(resultDiv);
+  });
+}
